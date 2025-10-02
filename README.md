@@ -1,5 +1,5 @@
-This (docker) service can be installed on your media server (emby, plex, ...). It will automatically synchronize the subtitle file with the video file. When downloading subtitles it can happen that there is an offset and aligning it manually takes some time. The service shall solve this issue.
-This service expects that there is only one video file in the same folder as the subtitle file. Currently there is no automatic detection of a matching video file. It will take the first video file it finds.
+This (docker) service can be installed on your media server (emby, plex, ...). It will automatically synchronize the subtitle file with the video file. When downloading subtitles it can happen that there is an offset and aligning it manually takes some time. The service solves this issue by using https://github.com/kaegi/alass.
+It expects that there is only one video file in the same folder as the subtitle file. Currently there is no automatic detection of a matching video file. It will take the first video file it finds.
 It will output a modified version of the subtitle file with a suffix "_synced".
 
 Setup:

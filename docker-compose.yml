@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  subtitle-synchronizer:
+    build: .
+    container_name: subtitle-synchronizer
+    restart: always
+    environment:
+      - WATCH_FOLDERS=/data1,/data2
+      - CHECK_INTERVAL=30
+    volumes:
+      - "/home/mo/videos1:/data1"
+      - "/home/mo/videos2:/data2"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
